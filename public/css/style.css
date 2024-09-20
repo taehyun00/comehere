@@ -239,7 +239,7 @@ a {
 		padding: 15px;
 		max-height: calc(100vh - 150px); /* 헤더와 입력 폼을 제외한 높이 */
 		overflow-y: scroll;
-		width: 100%; /* 전체 너비 사용 */
+		width: 100%;
 	  }
   
 	/* 헤더를 상단에 고정 */
