@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+	--dark-color-a: #667aff;
+	--dark-color-b: #7386ff;
+	--light-color: #ababab;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: #f6f6f7;
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: #3750de;
+	font-weight: 600;
+	color: #ffffff;
+	border: solid;
+	border-width: 2.5px;
+	border-color: #3750de;
+	font-size: 17px;
+}
+
+.btn:hover {
+	background: #132172;
+	color: #3750de;
+}
+
+/* Chat Page */
+
+.chat-container {
+	max-width: 1100px;
+	background: #fff;
+	margin: 30px auto;
+	overflow: hidden;
+	box-shadow: 0 20px 34px rgba(170, 170, 170, 0.25), 0 16px 16px rgba(170, 170, 170, 0.25);
+}
+
+.chat-header {
+	background: #1d3dca;
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+	background: #3750de;
+	color: #fff;
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.chat-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: #3750de;
+	border-radius: 5px;
+	box-shadow: 0 12px 26px rgba(170, 170, 170, 0.25), 0 8px 8px rgba(170, 170, 170, 0.25);
+}
+
+.chat-messages .message .meta {
+	font-size: 16px;
+	font-weight: bold;
+	color: #abb8ff;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+	font-size: 12px;
+	color: #8799ff;
+}
+
+.chat-messages .message .text {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: #1d3dca;
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+	border:  none;
+	outline: none;
+}
+
+/* Join Page */
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	color: #fff;
+	box-shadow: 0 20px 34px rgba(170, 170, 170, 0.25), 0 16px 16px rgba(170, 170, 170, 0.25);
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: #1d3dca;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: #f6f6f7;
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+	color: #1d3dca;
+	font-weight: bold;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+	outline: none;
+	border: solid;
+	border-color: #1d3dca;
+	border-radius: 10px;
+	background: none;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+	outline: none;
+	border: solid;
+	border-color: #1d3dca;
+	border-radius: 10px;
+	background: none;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+	height: 40px;
+	font-weight: bold;
+	color: #ffffff;
+	border: solid;
+	border-width: 2.5px;
+	background: #1d3dca;
+	border-color: #1d3dca;
+	border-radius: 10px;
+}
+
+.join-main .btn:hover {
+	color: #1d3dca;
+	background: #ffffff;
+}
+
+
+
+@media (max-width: 700px) {
+	/* 전체 컨테이너를 한 열로 배치 */
+	.chat-main {
+	  display: block;
+	}
+  
+	/* 사이드바를 숨기기 */
+	.chat-sidebar {
+	  display: none;
+	}
+  
+	/* 메시지 영역을 화면 전체 너비로 */
+	.chat-messages {
+	  padding: 15px;
+	  max-height: calc(100vh - 150px); /* 헤더와 입력 폼을 제외한 높이 */
+	  overflow-y: scroll;
+	}
+  
+	/* 헤더를 상단에 고정 */
+	.chat-header {
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	  z-index: 100;
+	}
+  
+	/* 입력 폼을 하단에 고정 */
+	.chat-form-container {
+	  position: fixed;
+	  bottom: 0;
+	  width: 100%;
+	  z-index: 100;
+	  background-color: #1d3dca;
+	}
+  
+	/* 입력 폼 스타일 변경 */
+	.chat-form-container input[type="text"] {
+	  flex: 1;
+	  padding: 10px;
+	  border: none;
+	  border-radius: 20px;
+	  margin-right: 10px;
+	}
+  
+	/* 전송 버튼 스타일 */
+	.chat-form-container button {
+	  border-radius: 20px;
+	  background-color: #3750de;
+	}
+  }
+  

@@ -1,0 +1,29 @@
+{
+  "name": "namepluschat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levhyun/NamePlusChat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/levhyun/NamePlusChat/issues"
+  },
+  "homepage": "https://github.com/levhyun/NamePlusChat#readme",
+  "dependencies": {
+    "express": "^4.21.0",
+    "moment": "^2.30.1",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
