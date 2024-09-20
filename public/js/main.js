@@ -33,11 +33,16 @@ chatForm.addEventListener('submit', (e) => {
 function outputMessage(message) {
     const div = document.createElement('div');
     div.classList.add('message');
+    
+    // UTC 시간을 로컬 시간으로 변환
+    const localTime = moment.utc(message.time, 'h:mm a').local().format('h:mm a');
+    
     div.innerHTML = `
-    <p class="meta">${message.name} <span>${message.time}</span></p>
+    <p class="meta">${message.name} <span>${localTime}</span></p>
     <p class="text">${message.text}</p>`;
     document.querySelector('.chat-messages').appendChild(div);
 }
+
 
 function outputRoomName(room) {
     roomName.innerText = room;
