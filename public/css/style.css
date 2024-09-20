@@ -219,69 +219,12 @@ a {
 	background: #ffffff;
 }
 
-
-
 @media (max-width: 700px) {
-	/* 전체 컨테이너를 한 열로 배치 */
 	.chat-main {
 		display: block;
-		width: 100%;
-		margin: 0; /* 여백 제거 */
-	  }
-  
-	/* 사이드바를 숨기기 */
-	.chat-sidebar {
-	  display: none;
-	}
-  
-	/* 메시지 영역을 화면 전체 너비로 */
-	.chat-messages {
-		padding: 15px;
-		max-height: calc(100vh - 150px); /* 헤더와 입력 폼을 제외한 높이 */
-		overflow-y: scroll;
-		width: 100%;
-	  }
-  
-	/* 헤더를 상단에 고정 */
-	.chat-header {
-	  position: fixed;
-	  top: 0;
-	  width: 100%;
-	  z-index: 100;
-	}
-  
-	/* 입력 폼을 하단에 고정 */
-	.chat-form-container {
-	  position: fixed;
-	  bottom: 0;
-	  width: 100%;
-	  z-index: 100;
-	  background-color: #1d3dca;
-	}
-  
-	/* 입력 폼 스타일 변경 */
-	.chat-form-container input[type="text"] {
-	  flex: 1;
-	  padding: 10px;
-	  border: none;
-	  border-radius: 20px;
-	  margin-right: 10px;
-	}
-  
-	/* 전송 버튼 스타일 */
-	.chat-form-container button {
-	  border-radius: 20px;
-	  background-color: #3750de;
 	}
 
-	/* 전송 버튼 텍스트 가운데 정렬 */
-	.chat-form-container button {
-	display: flex;
-	justify-content: center; /* 가로 중앙 */
-	align-items: center; /* 세로 중앙 */
-	padding: 0; /* 여백 제거 */
-		//예에스//
-  }
-  
-  }
-  
+	.chat-sidebar {
+		display: none;
+	}
+}
